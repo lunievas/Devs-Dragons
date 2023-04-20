@@ -13,4 +13,4 @@ const personagens = [magoAntonio,magaJulia,arqLuisa, arqueiroMagoChico];
 
 
 new PersonagemView(personagens).render();
-
+console.log(Personagem.verificarVencedor(arqLuisa,magoAntonio))

@@ -16,9 +16,20 @@ export class Personagem {
 
     obterInsignia(){
         if(this.level >= 5){
-            return `Implacável ${this.tipo}`
+            return `Implacável ${this.constructor.tipo}`
         }
-        return `${this.tipo} Iniciante`
+        return `${this.constructor.tipo} Iniciante`
     };
+
+    static  verificarVencedor(per1,per2){
+        if(per1.level === per2.level ){
+            return "Empate!!!"
+        }
+        if(per1.level > per2.level){
+            return `${per1.constructor.tipo} ${per1.nome} é o vencedor!`
+        }
+
+        return `${per2.constructor.tipo} ${per2.nome} é o vencedor!`
+    }
 };
 
